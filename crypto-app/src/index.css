@@ -4,23 +4,25 @@ margin:0;
 padding:0;
 width:100%;
 background:#35069c;
-
+/*outline: 2px solid red;*/
 text-align: center;
 }
 
+/*nav*/
 #nav-container{
   display:flex;
   justify-content: space-evenly;
   width:100%;
 }
 
-
+/*logo*/
 #site-logo{
   margin-top: -3.5rem;
   margin-left: 2rem;
   width:20%;
 }
 
+/*nav options*/
 #nav-links{
   display: flex;
   margin-left: 11rem;
@@ -32,12 +34,20 @@ text-align: center;
   color:white;
   text-decoration: none;
   list-style: none;
+  font-weight: bolder;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   margin-top: 3rem;
   width:5rem;
 }
 
+.nav-options:hover{
+color:aqua;
+}
 
+/*Login btn*/
 #login-btn{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder;
   margin-left:17rem;
   margin-top: 2.5rem;
   margin-bottom: 8rem;
@@ -45,10 +55,10 @@ text-align: center;
   padding-top: .5rem;
   border-radius: 1rem;
   padding-bottom: .5rem;
-  background-image:linear-gradient(180deg, rgb(175, 175, 23),yellow);
+  background-image:linear-gradient(175deg,yellow,rgb(175, 175, 23),rgb(175, 175, 23),rgb(175, 175, 23));
 }
 
 #login-btn:hover{
   cursor: pointer;
-  background-image:linear-gradient(180deg, rgb(175, 175, 23),rgb(167, 167, 5));
+  background-image:linear-gradient(180deg, rgb(236, 236, 14),rgb(201, 201, 16));
 }
