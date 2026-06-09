@@ -68,23 +68,49 @@ color:aqua;
 
 /*Starting Homepage*/
 
+/*Search Box*/
 #search-heading{
   color:rgb(216, 215, 215);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: xx-large;
 }
 
+#search-box{
+  margin-top: 2rem;
+  position: relative;
+}
+
+
 #search-input-box{
   background-color: aliceblue;
   width: 40%;
-  height:1.5rem;
+  height:3rem;
   border: none;
+  outline:none;
+  padding-left:2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
 }
 
+#search-input-box:hover{
+background-color: rgb(241, 239, 239);;
+}
+
+
 #search-btn{
+  position:absolute;
+  right:25rem;
   background-color:rgb(234, 238, 10);
-  height:1.6rem;
-  width:10%;
-  border:none;
-  border-radius: 5%;
+  height:2.5rem;
+  width:2.5rem;
+  border: none;
+  box-shadow: 0 0 2px black;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  transform: translateY(10%);
+}
+
+#search-btn:hover{
+  cursor: pointer;
+  background-color:rgb(192, 196, 7);
 }
