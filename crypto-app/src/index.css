@@ -63,3 +63,28 @@ color:aqua;
   cursor: pointer;
   background-image:linear-gradient(180deg, rgb(236, 236, 14),rgb(201, 201, 16));
 }
+
+/*Ending Navbar*/
+
+/*Starting Homepage*/
+
+#search-heading{
+  color:rgb(216, 215, 215);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: xx-large;
+}
+
+#search-input-box{
+  background-color: aliceblue;
+  width: 40%;
+  height:1.5rem;
+  border: none;
+}
+
+#search-btn{
+  background-color:rgb(234, 238, 10);
+  height:1.6rem;
+  width:10%;
+  border:none;
+  border-radius: 5%;
+}
