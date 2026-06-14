@@ -29,11 +29,16 @@ function homepage(){
                     <tbody>
                     {displayCoin.slice(0,10).map((item,index)=>(
                             <tr className="table-layout" key={index}>
-                                <td className="coin-name">
+                                <td className="coin-deatils-row">
+                                <span className="coin-names">
                                 <img src={item.image} alt="Coin-Icons"/>
                                 {item.name +" - "+ item.symbol}
+                                </span>
+                               <span id="table-price">$ {item.current_price.toLocaleString()}</span>
+                                <span id="table-hrschange">{Math.floor(item.price_change_percentage_24h*100)/100}</span>
+                                <span id="table-marketcap">$ {item.market_cap.toLocaleString()}</span>
                                 </td>
-                                
+                                <hr/>
                             </tr>
                         ))}
                     </tbody>

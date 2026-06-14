@@ -121,8 +121,8 @@ background-color: rgb(241, 239, 239);;
   margin-top: 3rem;
   display: flex;
   justify-content: space-evenly;
-  width:70%;
-  margin-left: 15%;
+  width:85%;
+  margin-left: 8%;
   border-collapse: collapse;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -173,22 +173,44 @@ background-color: rgb(241, 239, 239);;
 
 /*Coin Tables*/
 
-.table-layout{
-  border-collapse: collapse;
-}
 
-.coin-name{
+.coin-deatils-row{
   margin-top: 2rem;
+  margin-left: 12%;
+  width:80%;
   display: flex;
   align-items: center;
-  gap:20px;
   color:white;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
+  font-weight:700;
   font-size: large;
 }
 
-.coin-name img{
-  margin-left:17%;
-  width:3%;
+.coin-names{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.coin-deatils-row img{
+  width:12%;
+}
+
+#table-price{
+margin-left: 1.1rem;
+}
+
+#table-marketcap{
+  margin-left: 7%;
+}
+
+#table-hrschange{
+  margin-left: 2rem;
+}
+
+hr{
+  opacity: 0.5;
+  margin-top: 0.5rem;
+  margin-left: 8%;
+  width:85%;
 }
