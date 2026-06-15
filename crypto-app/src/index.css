@@ -243,7 +243,19 @@ hr{
 
                        /*Starting About Us*/
 
+#aboutus-heading{
+  margin-top: 5rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
 
-                       
+#aboutus-container{
+  display: flex;
+  gap:.5rem;
+}
 
+#aup-pic{
+  margin-top: 1rem;
+  width:20%;
+}
                       /*Ending About Us*/
