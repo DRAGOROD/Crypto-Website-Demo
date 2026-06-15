@@ -1,4 +1,4 @@
-/*Starting Navbar*/
+                      /*Starting Navbar*/
 *{
 margin:0;
 padding:0;
@@ -64,10 +64,11 @@ color:aqua;
   background-image:linear-gradient(180deg, rgb(236, 236, 14),rgb(201, 201, 16));
 }
 
-/*Ending Navbar*/
+                       /*Ending Navbar*/
 
 
-/*Starting Homepage*/
+                      /*Starting Homepage*/
+
 
 /*Search Box*/
 #search-heading{
@@ -173,17 +174,28 @@ background-color: rgb(241, 239, 239);;
 
 /*Coin Tables*/
 
-
 .coin-deatils-row{
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-left: 12%;
   width:80%;
   display: flex;
   align-items: center;
   color:white;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight:700;
+  font-family:Ubuntu;
+  font-weight:lighter;
   font-size: large;
+}
+
+.table-layout td span:hover{
+  font-size: larger;
+  transition: 0.2s;
+}
+
+.coin-names:hover{
+  cursor: pointer;
+  font-size: larger;
+  transition: 0.2s;
+  font-weight: bold;
 }
 
 .coin-names{
@@ -196,15 +208,15 @@ background-color: rgb(241, 239, 239);;
   width:12%;
 }
 
-#table-price{
+.table-price{
 margin-left: 1.1rem;
 }
 
-#table-marketcap{
+.table-marketcap{
   margin-left: 7%;
 }
 
-#table-hrschange{
+.table-layout td span[value="24hrs-change"]{
   margin-left: 2rem;
 }
 
@@ -214,3 +226,24 @@ hr{
   margin-left: 8%;
   width:85%;
 }
+
+.green{
+  color:rgb(5, 245, 5);
+  font-weight: bold;
+}
+
+.red{
+  color:rgb(236, 7, 7);
+  font-weight: bold;
+}
+
+
+                       /*Ending Homepage*/
+
+
+                       /*Starting About Us*/
+
+
+                       
+
+                      /*Ending About Us*/
