@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Homepage from './homepage'
 import Coin from './coin'
 import AboutUs from './aboutUs'
+import Footer from './footer'
 function App() {
   
 
@@ -14,6 +15,7 @@ function App() {
       <Route path='/coin/:coinId' element={<Coin/>}/>
       </Routes>
       <AboutUs/>
+      <Footer/>
     </>
   )
 }

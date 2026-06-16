@@ -4,15 +4,36 @@ import { coinContext } from './CoinContext'; {/* importing coinContext variable 
 function homepage(){
     let {allCoin}=useContext(coinContext)
     let [displayCoin,setDisplayCoin]=useState([])
+    let [input,setInput]=useState('');
+
+    function handleInput(e){
+        setInput(e.target.value)
+    if(e.target.value===""){
+        setDisplayCoin(allCoin);
+    }
+    }
+
+    async function searchHandle(e){
+        e.preventDefault();
+    let coins= await allCoin.filter((item)=>{
+        return item.name.toLowerCase().includes(input.toLowerCase())
+    })
+    setDisplayCoin(coins);
+    }
+
     useEffect(()=>{
         setDisplayCoin(allCoin);
     },[allCoin])
+
     return (
         <div id="page-container">
             <div id="search-container">
                 <h3 id="search-heading">Look for the Best Performing Coins</h3>
-                <form id="search-box">
-                    <input type="text" placeholder="Search Crypto........" id="search-input-box"/>
+                <form id="search-box" onSubmit={searchHandle}>
+                    <input onChange={handleInput} value={input} list="coin-list" type="text" placeholder="Search Crypto........" id="search-input-box" required/>
+                    <datalist id="coin-list">
+                        {allCoin.map((item,index)=>(<option key={index} value={item.name}/>))}
+                    </datalist>
                     <button type="submit" id="search-btn">&#x2315;</button>
                 </form>
             </div>
