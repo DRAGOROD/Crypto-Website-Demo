@@ -8,8 +8,12 @@ function Navbar(){
               <a href="#" className="nav-options"><li id="">Home</li></a>
               <a href="#" className="nav-options"><li id="">Market</li></a>
               <a href="#" className="nav-options"><li id="">About Us</li></a>
-              <a href="#" className="nav-options"><li id="">Join</li></a>
             </ul>
+            <select id="currency-box">
+              <option value="usd">USD</option>
+              <option value="eur">EUR</option>
+              <option value="inr">INR</option>
+            </select>
             <div id="login-btn">Login</div>
         </nav>
     )
