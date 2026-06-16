@@ -118,7 +118,7 @@ background-color: rgb(241, 239, 239);;
 
 #search-btn{
   position:absolute;
-  right:25rem;
+  right:24.5rem;
   background-color:rgb(234, 238, 10);
   height:2.5rem;
   width:2.5rem;
@@ -127,14 +127,13 @@ background-color: rgb(241, 239, 239);;
   font-size: 1.7rem;
   border-radius: 50%;
   transform: translateY(10%);
+  
 }
 
 #search-btn:hover{
   cursor: pointer;
   background-color:rgb(192, 196, 7);
 }
-
-
 
 /*Coin Table*/
 #coin-table table thead tr{

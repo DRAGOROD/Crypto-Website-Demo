@@ -6,6 +6,7 @@ import Icon3 from './Assets/iconf3.png'
 import Icon4 from './Assets/iconf4.png'
 import Icon5 from './Assets/iconf5.png'
 import Icon6 from './Assets/iconf6.png'
+import CW from './Assets/CW.mp4'
 function aboutUs(){
 
 return (
@@ -29,7 +30,9 @@ return (
                 <p className="stuff-para">Your Transaction Details Would Be Secure</p>
             </div> 
             </div>
+
             <img src={AUP} alt="About Us Image" id="aup-pic"/>
+
             <div id="container-right">
             <div className="container-stuff">
                 <img src={Icon4} alt="icons" className="aboutus-icons"/>
