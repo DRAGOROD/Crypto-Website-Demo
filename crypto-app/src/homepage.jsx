@@ -1,8 +1,9 @@
 import React from 'react'
 import {useContext,useState,useEffect} from 'react'
 import { coinContext } from './CoinContext'; {/* importing coinContext variable from CoinContext file */}
+import {Link} from 'react-router-dom'
 function homepage(){
-    let {allCoin}=useContext(coinContext)
+    let {allCoin,currency}=useContext(coinContext)
     let [displayCoin,setDisplayCoin]=useState([])
     let [input,setInput]=useState('');
 
@@ -24,7 +25,7 @@ function homepage(){
     useEffect(()=>{
         setDisplayCoin(allCoin);
     },[allCoin])
-
+    
     return (
         <div id="page-container">
             <div id="search-container">
@@ -51,13 +52,13 @@ function homepage(){
                     {displayCoin.slice(0,10).map((item,index)=>(
                             <tr className="table-layout" key={index}>
                                 <td className="coin-deatils-row">
-                                <span className="coin-names">
+                                <Link to={`coin/${item.id}`} className="coin-names">
                                 <img src={item.image} alt="Coin-Icons"/>
                                 {item.name +" - "+ item.symbol}
-                                </span>
-                               <span className="table-price">$ {item.current_price.toLocaleString()}</span>
+                                </Link>
+                               <span className="table-price">{currency.symbol} {item.current_price.toLocaleString()}</span>
                                 <span value="24hrs-change" className={item.price_change_percentage_24h>0?"green":"red"}>{Math.floor(item.price_change_percentage_24h*100)/100}</span>
-                                <span className="table-marketcap">$ {item.market_cap.toLocaleString()}</span>
+                                <span className="table-marketcap">{currency.symbol} {item.market_cap.toLocaleString()}</span>
                                 </td>
                                 <hr/>
                             </tr>
