@@ -193,6 +193,7 @@ background-color: rgb(241, 239, 239);;
 
 /*Coin Tables*/
 
+
 .coin-deatils-row{
   margin-top: 1rem;
   margin-left: 12%;
@@ -330,3 +331,121 @@ hr{
   
 }
                       /*Ending Footer*/
+
+
+                      /*Starting CoinPage*/
+
+
+#coinpage-heading{
+display: flex;
+align-items: center;
+gap:5px;
+  font-size: xxx-large;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+#coinpage-icon{
+  width:6%;
+}                      
+
+#coinpage-currencysymbol{
+  color:yellow;
+  font-size: xx-large;
+  font-weight: lighter;
+  display: block;
+  margin-right: 80rem;
+}
+
+                        /*Line Chart*/
+#line-chart{
+  width:40%;
+  margin-left: 6rem;
+  border-radius: 20%;
+}
+
+/*Coin Info section*/
+#coininfo-container{
+  display: flex;
+}
+
+#coin-info{
+  color:white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-size: larger;
+}
+
+#coin-info div{
+  margin-bottom: 0.4rem;
+}
+
+#coin-info div span{
+  color:yellow;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#coin-info hr{
+  margin-top: 0.5rem;
+  margin-bottom:0.5rem ;
+  width: 40%;
+  margin-left: 30%;
+  opacity: 0.2;
+  color: gray;
+}
+
+#coin-info div:nth-child(5){
+  color:rgb(5, 255, 5)
+}
+
+#coin-info div:nth-child(7){
+  color:rgb(248, 9, 9)
+}
+
+#buy-buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+#sell-btn{
+  background-color: rgb(194, 3, 3);
+}
+
+#sell-btn:hover{
+  cursor: pointer;
+  background-color: red;
+}
+
+#sell-btn:active{
+  cursor: pointer;
+  background-image:radial-gradient(red,rgb(212, 72, 72))
+}
+
+#buy-btn{
+  background-color: rgb(2, 77, 2);
+}
+
+#buy-btn:hover{
+  cursor: pointer;
+  background-color: rgb(5, 185, 5);
+}
+
+#buy-btn:active{
+  cursor: pointer;
+  background-image:radial-gradient(rgb(5, 185, 5),rgb(8, 250, 8))
+}
+
+#buy-btn,#sell-btn{
+  padding:1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  border-radius: 5px;
+}
+
+
+                      /*Ending CoinPage*/
+

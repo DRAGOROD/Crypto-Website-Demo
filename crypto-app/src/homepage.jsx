@@ -2,7 +2,10 @@ import React from 'react'
 import {useContext,useState,useEffect} from 'react'
 import { coinContext } from './CoinContext'; {/* importing coinContext variable from CoinContext file */}
 import {Link} from 'react-router-dom'
+
+
 function homepage(){
+    
     let {allCoin,currency}=useContext(coinContext)
     let [displayCoin,setDisplayCoin]=useState([])
     let [input,setInput]=useState('');
