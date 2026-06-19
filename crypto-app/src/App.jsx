@@ -4,12 +4,15 @@ import Homepage from './homepage'
 import Coin from './coin'
 import AboutUs from './aboutUs'
 import Footer from './footer'
+import HeroSec from'./Hero'
+
 function App() {
   
 
   return (
     <>
-    <Navbar/>
+      <Navbar/>
+      <HeroSec/>
       <Routes>
       <Route path='/' element={<Homepage/>}/>
       <Route path='/coin/:coinId' element={<Coin/>}/>

@@ -90,6 +90,7 @@ color:aqua;
 
 /*Search Box*/
 #search-heading{
+  margin-top: 10rem;
   color:rgb(216, 215, 215);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: xx-large;
@@ -448,4 +449,56 @@ gap:5px;
 
 
                       /*Ending CoinPage*/
+
+
+                      /*Starting Hero Section*/
+#hero-heading{
+  font-size: 5rem;
+  color:white;
+  margin-bottom: 5rem;
+}
+
+#hero-heading span{
+  color:yellow;
+}
+
+#icon-container{
+  display: flex;
+  align-items: center;
+}
+
+.hero-coin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    font-family: Ubuntu;
+}
+
+.hero-coin img{
+  width:20%;
+  margin-bottom: 1rem;
+}
+
+.hero-coin div{
+text-align: center;
+margin-bottom: 0.5rem;
+}
+
+.hero-coin div span+span{
+margin-left: 1rem;
+font-weight: lighter;
+}
+
+.hero-coin div span{
+font-weight: bold;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hero-coin p{
+  color:yellow;
+  font-size: x-large;
+  font-weight: 500;
+}
+                      /*Ending Hero Section*/
 

@@ -60,7 +60,7 @@ function homepage(){
                                 {item.name +" - "+ item.symbol}
                                 </Link>
                                <span className="table-price">{currency.symbol} {item.current_price.toLocaleString()}</span>
-                                <span value="24hrs-change" className={item.price_change_percentage_24h>0?"green":"red"}>{Math.floor(item.price_change_percentage_24h*100)/100}</span>
+                                <span value="24hrs-change" className={item.price_change_percentage_24h>0?"green":"red"}>{Math.floor(item.price_change_percentage_24h*100)/100} %</span>
                                 <span className="table-marketcap">{currency.symbol} {item.market_cap.toLocaleString()}</span>
                                 </td>
                                 <hr/>
