@@ -28,6 +28,7 @@ function Navbar(){
   }
 
     return (
+      <>
         <div id="nav-container">
           <Link to={`/`} id="site-logo">
           <img src={SiteLogo} alt="Conify Logo"/>
@@ -44,6 +45,8 @@ function Navbar(){
             </select>
             <div id="login-btn">Login</div>
         </div>
+        <hr/>
+        </>
     )
 }
 
