@@ -538,8 +538,8 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 
 .hero-img{
-  width:7%;
-  height:12%;
+  width:6%;
+  height:11%;
   margin-left: 7rem;
   margin-right: 7rem;
   animation:move-vertically 3s alternate linear infinite;
@@ -556,5 +556,60 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
     top: 44%;
   }
 }
+
+
+.herocoin-Icon:hover{
+  box-shadow: 0 4px 0 0 skyblue;
+}
                       /*Ending Hero Section*/
 
+
+                      /*Starting Skeleton Section*/
+/*Skeleton head*/
+#skeleton-heading{
+  margin-top: 5rem;
+  display: flex;
+  margin-left: -33rem;
+}
+
+#skeleton-headtext{
+  margin-top: 2.5rem;
+  margin-left:-65rem ;
+}
+
+/*skeleton body*/
+#skeleton-chart{
+  margin-top: 0.5rem;
+  margin-left: -5rem;
+}
+
+#skeleton-details{
+  margin-top: 0.5rem;
+  margin-left: -6rem;
+}
+
+.skeleton-text-deatils{
+  margin-bottom: 1rem;
+}
+#skeleton-body{
+  display: flex;
+}
+
+/*Skeleton Buttons*/
+
+#skeleton-btns{
+  display: flex;
+  justify-content:space-between;
+}
+
+#skeleton-buy-btn{
+  margin-top: 1rem;
+  margin-left:-11rem;
+}
+
+#skeleton-sell-btn{
+  margin-top: 1rem;
+  margin-left:0rem;
+}
+
+                      /*Ending Skeleton Section*/

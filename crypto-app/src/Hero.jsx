@@ -22,7 +22,7 @@ return (
     <div id="icon-container">
         {showCoin.slice(0,4).map((item,index)=>(
             <div key={index} className="hero-coin">
-                <img src={item.image} alt="Coin-Icon"/>
+                <img src={item.image} alt="Coin-Icon" className="herocoin-Icon"/>
                 <div><span>{item.name}</span>  <span className={item.price_change_percentage_24h>0?"green":"red"}>{Math.floor(item.price_change_percentage_24h*100)/100} %</span></div>
                 <p>{currency.symbol} {item.current_price}</p>
             </div>

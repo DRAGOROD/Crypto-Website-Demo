@@ -1,24 +1,17 @@
 import Navbar from './navbar'
-import { Routes, Route } from 'react-router-dom'
-import Homepage from './homepage'
-import Coin from './coin'
-import AboutUs from './aboutUs'
 import Footer from './footer'
-import HeroSec from'./Hero'
+import 'react-loading-skeleton/dist/skeleton.css'
+import { SkeletonTheme } from 'react-loading-skeleton'
+
 
 function App() {
   
-
   return (
     <>
+    <SkeletonTheme baseColor='#c9c5c5' highlightColor='#a4c005'>
       <Navbar/>
-      <HeroSec/>
-      <Routes>
-      <Route path='/' element={<Homepage/>}/>
-      <Route path='/coin/:coinId' element={<Coin/>}/>
-      </Routes>
-      <AboutUs/>
       <Footer/>
+    </SkeletonTheme>
     </>
   )
 }

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { coinContext } from "./CoinContext";
 import LineChart from "./lineChart";
-
+import SkeletonCoinPage from "./skeletonCoinPage"
 
 function coin(){
 
@@ -86,7 +86,7 @@ async function fetchHistoricalData(){
     )
 
  }else{
-    <div>Loading...</div>
+   return <SkeletonCoinPage/>
  }
     
 
