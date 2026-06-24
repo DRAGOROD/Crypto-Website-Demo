@@ -1,22 +1,22 @@
 import React from 'react'
 import {useContext,useState,useEffect} from 'react'
 import { coinContext } from './CoinContext'; {/* importing coinContext variable from CoinContext file */}
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'; {/*Importing Link to setup the rought page */}
 
 let postPerPage=10;
 
 function homepage(){
 
-
-
-
+    {/*importing allcoin, currency from the exported coinContext*/}
     let {allCoin,currency}=useContext(coinContext)
+    {/*setting up veriables to show the coin deatils */}
     let [displayCoin,setDisplayCoin]=useState([])
+    {/*setting up veriables to detect the input of searchBox */}
     let [input,setInput]=useState('');
     {/*page of pagination */}
     let [currentPage,setCurrentPage]=useState(1)
 
-
+ {/*InputBox function*/}
     function handleInput(e){
         setInput(e.target.value)
     if(e.target.value===""){
@@ -24,6 +24,13 @@ function homepage(){
     }
     }
 
+         {/*Pagination Calculation */}
+let lastIndex=currentPage*postPerPage;
+let firstIndex=lastIndex-postPerPage;
+let currentPosts=displayCoin.slice(firstIndex,lastIndex);   
+let totalPages= Math.ceil(displayCoin.length/postPerPage)
+
+    {/*SearchBox function*/}
     async function searchHandle(e){
         e.preventDefault();
     let coins= await allCoin.filter((item)=>{
@@ -31,12 +38,6 @@ function homepage(){
     })
     setDisplayCoin(coins);
     }
-
-     {/*Pagination Calculation */}
-let lastIndex=currentPage*postPerPage;
-let firstIndex=lastIndex-postPerPage;
-let currentPosts=displayCoin.slice(firstIndex,lastIndex);   
-let totalPages= Math.ceil(displayCoin.length/postPerPage)
 
     useEffect(()=>{
         setDisplayCoin(allCoin);
@@ -46,6 +47,7 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
         <div id="page-container">
             <div id="search-container">
                 <h3 id="search-heading">Look for the Best Performing Coins</h3>
+                {/*SearchBox */}
                 <form id="search-box" onSubmit={searchHandle}>
                     <input onChange={handleInput} value={input} list="coin-list" type="text" placeholder="Search Crypto........" id="search-input-box" required/>
                     <datalist id="coin-list">
@@ -65,7 +67,8 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
                       </tr>
                     </thead>
                     <tbody>
-                    {currentPosts.slice(0,30).map((item,index)=>(
+                        {/*mapping the coin Details*/}
+                    {currentPosts.slice(0,10).map((item,index)=>(
                             <tr className="table-layout" key={index}>
                                 <td className="coin-deatils-row">
                                 <Link to={`coin/${item.id}`} className="coin-names">
@@ -79,6 +82,7 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
                                 <hr/>
                             </tr>
                         ))}
+                        {/*placing the pagination section */}
                         <div id="pagination-btns">
                          {Array.from({length:totalPages},(_,i)=>i+1).map(page=>(<button key={page} onClick={()=>setCurrentPage(page)}>{page}</button>))}
                         </div>

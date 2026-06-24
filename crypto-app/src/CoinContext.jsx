@@ -1,12 +1,17 @@
 import { createContext,useEffect,useState } from "react";
 
+{/*creating context to export the coin infos to other component */}
 export const coinContext=createContext()
 
 
 function coinContextProvider(props){
 
+{/*setting up veriables to store the coin details */}
 let [allCoin,setAllCoin]=useState([])
+{/*setting up veriables to store the currency details */}
 let [currency,setCurrency]=useState({name:"usd",symbol:"$"})
+
+{/*fetching the coin details for the home page */}
 async function fetchAllCoins(){
     const options = {method: 'GET', headers: {'x-cg-demo-api-key': 'CG-MMfNsiSkDJWtroWY1ruRtqMA'}};
 
@@ -19,8 +24,9 @@ async function fetchAllCoins(){
 
 useEffect(()=>{
     fetchAllCoins();
-},[])
+},[currency])
 
+{/*giving the prop value of allCoin,currency and setCurrency to other components*/}
 const contextValue={allCoin,currency,setCurrency}
 
 return (

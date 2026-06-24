@@ -6,12 +6,15 @@ import Icon3 from './Assets/iconf3.png'
 import Icon4 from './Assets/iconf4.png'
 import Icon5 from './Assets/iconf5.png'
 import Icon6 from './Assets/iconf6.png'
+
 function aboutUs(){
 
 return (
     <>
+         
         <h2 id="aboutus-heading">WHY <span style={{color:"yellow"}}>CHOOSE US</span></h2>
         <div id="aboutus-container">
+            {/*AboutUs Left Section */}
             <div id="container-left">
             <div className="container-stuff">
                 <img src={Icon1} alt="icons" className="aboutus-icons"/>
@@ -29,9 +32,10 @@ return (
                 <p className="stuff-para">Your Transaction Details Would Be Secure</p>
             </div> 
             </div>
-
+           {/*About Us Middle Image */}
             <img src={AUP} alt="About Us Image" id="aup-pic"/>
 
+            {/*AboutUs Right Section */}
             <div id="container-right">
             <div className="container-stuff">
                 <img src={Icon4} alt="icons" className="aboutus-icons"/>

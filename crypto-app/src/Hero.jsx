@@ -4,7 +4,9 @@ import HeroPic1 from './Assets/heropic1.png'
 import HeroPic2 from './Assets/heropic2.png'
 function Hero(){
 
+{/*setting up veriables to store the coin details */}  
 let {allCoin,currency}=useContext(coinContext);
+{/*setting up veriables to show the coin details */}
 let [showCoin,setShowCoin]=useState([])
 
 useEffect(()=>{

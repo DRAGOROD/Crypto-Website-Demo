@@ -1,16 +1,25 @@
 import React, { useContext, useEffect, useState } from "react";
+{/*Importing Params to track Coin Id */}
 import { useParams } from "react-router-dom";
+{/*Importing coinContext's value from CoinContext file*/}
 import { coinContext } from "./CoinContext";
+{/*Importing Chart details */}
 import LineChart from "./lineChart";
+{/*Importing Skeleton */}
 import SkeletonCoinPage from "./skeletonCoinPage"
 
 function coin(){
 
+{/*destructing and storing coinId */}
  let {coinId}=useParams()
+ {/*storing coin info */}
  let [coinData,setCoinData]=useState()
+ {/*Importing currency from coinContext file */}
  let {currency}=useContext(coinContext)
+{/*creating data for Coin Charts*/}
 let [historicalData,setHistoricalData]=useState()
 
+{/*fetching coin details with coinID*/}
  async function fetchCoinData(){
     fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`, {
   method: 'GET',
@@ -20,10 +29,11 @@ let [historicalData,setHistoricalData]=useState()
   }
 })
   .then(response => response.json())
-  .then(response => setCoinData(response))
+  .then(response => setCoinData(response)) /*setting the response into CoinData;
   .catch(error => console.error('Error:', error));
  }
 
+ {/*Fetching Chart Data*/}
 async function fetchHistoricalData(){
  fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency.name}&days=14&interval=daily`, {
   method: 'GET',
@@ -44,19 +54,22 @@ async function fetchHistoricalData(){
     fetchHistoricalData()
  },[currency])
 
+ {/*if the data fetching are successful*/}
  if(coinData && historicalData){
 
     return (
 
         <div>
           <div id="coinpage-head">
-            
+            {/*coin heads */}
             <p id="coinpage-heading">
               <img src={coinData.image.large} id="coinpage-icon"/>
               {coinData.symbol.toUpperCase()}/<span id="coinpage-currencysymbol">{currency.name.toUpperCase()}</span></p>
             </div>
             <div id="coininfo-container">
+              {/*placing the line chart */}
             <LineChart historicalData={historicalData} />
+            {/*other coin details*/}
             <div id="coin-info">
             <div><span>Market Rank:</span> #{coinData.market_cap_rank}</div>
             <hr/>
@@ -86,6 +99,7 @@ async function fetchHistoricalData(){
     )
 
  }else{
+  {/*if the data fetching aren't successful load Skeleton */}
    return <SkeletonCoinPage/>
  }
     

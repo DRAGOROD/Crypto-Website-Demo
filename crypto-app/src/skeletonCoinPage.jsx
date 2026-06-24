@@ -1,4 +1,5 @@
 import React from "react";
+{/*Importing Skeleton*/}
 import Skeleton from "react-loading-skeleton";
 
 function skeleton(){
@@ -21,9 +22,11 @@ return (
         <Skeleton height={500} width="50%"/>
       </div>
       <div>
+        {/*mapping the detail section */}
         <div id="skeleton-details">
       {Array.from({length:9}).map((_,index)=><Skeleton width="55%" height={30} key={index} className="skeleton-text-deatils" />)}
         </div> 
+        {/*buy and sell buttons */}
       <div id="skeleton-btns">
       <div id="skeleton-buy-btn">
        <Skeleton height={55} width="58%"/>
