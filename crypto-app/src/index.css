@@ -370,6 +370,22 @@ gap:1rem;
   color:azure;
   
 }
+
+.address-info{
+  color:rgb(187, 185, 185);
+  text-decoration: none;
+}
+
+.address-info:hover{
+  cursor: pointer;
+  color:azure;
+}
+
+#copyright{
+  margin-top: 1rem;
+  color:rgb(187, 185, 185);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
                       /*Ending Footer*/
 
 

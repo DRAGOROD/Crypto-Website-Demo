@@ -4,13 +4,14 @@ import React from "react";
 function Footer(){
 
 return (
+    <>
     <div className="container">
         <div className="container1">
             <h3>COMPANY</h3>
             <p>Blog</p>
             <p>Career</p>
-            <p>Policy</p>
-            <p>Community</p>
+            <p><a className="address-info" href="tel:5555599999">&#9742; (555)-5599-999</a></p>
+            <p><a className="address-info" href="mailto:jitmishra40@gmail.com">&#9993; MyEmail@Gmail.com</a></p>
         </div>
         <div className="container1">
             <h3>PRODUCT</h3>
@@ -34,6 +35,8 @@ return (
             <p>Affiliate</p>
         </div>
     </div>
+    <p id="copyright">CopyRight &copy; 2026,Coinify- All Right Reserved</p>
+    </>
 )
 
 }
