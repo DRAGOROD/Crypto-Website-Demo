@@ -8,7 +8,7 @@ function App() {
   
   return (
     <>
-    <SkeletonTheme baseColor='#c9c5c5' highlightColor='#a4c005'>
+    <SkeletonTheme baseColor='#a8a4a4' highlightColor='#88a002'>
       <Navbar/>
       <Footer/>
     </SkeletonTheme>

@@ -3,12 +3,19 @@ import {useContext,useState,useEffect} from 'react'
 import { coinContext } from './CoinContext'; {/* importing coinContext variable from CoinContext file */}
 import {Link} from 'react-router-dom'
 
+let postPerPage=10;
 
 function homepage(){
-    
+
+
+
+
     let {allCoin,currency}=useContext(coinContext)
     let [displayCoin,setDisplayCoin]=useState([])
     let [input,setInput]=useState('');
+    {/*page of pagination */}
+    let [currentPage,setCurrentPage]=useState(1)
+
 
     function handleInput(e){
         setInput(e.target.value)
@@ -25,10 +32,16 @@ function homepage(){
     setDisplayCoin(coins);
     }
 
+     {/*Pagination Calculation */}
+let lastIndex=currentPage*postPerPage;
+let firstIndex=lastIndex-postPerPage;
+let currentPosts=displayCoin.slice(firstIndex,lastIndex);   
+let totalPages= Math.ceil(displayCoin.length/postPerPage)
+
     useEffect(()=>{
         setDisplayCoin(allCoin);
     },[allCoin])
-    
+
     return (
         <div id="page-container">
             <div id="search-container">
@@ -52,7 +65,7 @@ function homepage(){
                       </tr>
                     </thead>
                     <tbody>
-                    {displayCoin.slice(0,10).map((item,index)=>(
+                    {currentPosts.slice(0,30).map((item,index)=>(
                             <tr className="table-layout" key={index}>
                                 <td className="coin-deatils-row">
                                 <Link to={`coin/${item.id}`} className="coin-names">
@@ -66,6 +79,9 @@ function homepage(){
                                 <hr/>
                             </tr>
                         ))}
+                        <div id="pagination-btns">
+                         {Array.from({length:totalPages},(_,i)=>i+1).map(page=>(<button key={page} onClick={()=>setCurrentPage(page)}>{page}</button>))}
+                        </div>
                     </tbody>
                 </table>
             </div>

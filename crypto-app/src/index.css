@@ -272,6 +272,34 @@ hr{
 }
 
 
+/*Pagination Buttons*/
+#pagination-btns button{
+  width:3%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 25%;
+  border: none;
+  box-shadow: 2px 2px 2px 3px gray;
+  background-color: antiquewhite;
+}
+
+#pagination-btns button:hover{
+  cursor: pointer;
+}
+
+#pagination-btns button:active{
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 2px 2px 2px 1px gray;
+}
+
+#pagination-btns{
+margin-top: 1rem;
+display: flex;
+justify-content: center;
+gap:1rem;
+}
+
                        /*Ending Homepage*/
 
 
