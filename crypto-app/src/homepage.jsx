@@ -67,7 +67,7 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
                       </tr>
                     </thead>
                     <tbody>
-                        {/*mapping the coin Details*/}
+                    {/*mapping the coin Details*/}
                     {currentPosts.slice(0,10).map((item,index)=>(
                             <tr className="table-layout" key={index}>
                                 <td className="coin-deatils-row">

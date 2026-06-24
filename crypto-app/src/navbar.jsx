@@ -43,12 +43,12 @@ let aboutUsRef=useRef(null)
       <>
         <div id="nav-container">
           {/*setting up link to go back home */}
-          <Link to={`/`} id="site-logo">
+          <Link to={`/Crypto-Website-Demo/`} id="site-logo">
           <img src={SiteLogo} alt="Conify Logo"/>
           </Link>
           {/*setting up navbar*/}
             <div id="nav-links">
-              <Link to={`/`} className="nav-options" onClick={()=>homeRef.current.scrollIntoView({behavior:"smooth"})}>Home</Link>
+              <Link to={`/Crypto-Website-Demo/`} className="nav-options" onClick={()=>homeRef.current.scrollIntoView({behavior:"smooth"})}>Home</Link>
               <div  className="nav-options" onClick={()=>marketRef.current.scrollIntoView({behavior:"smooth"})}>Market</div>
               <div  className="nav-options" onClick={()=>aboutUsRef.current.scrollIntoView({behavior:"smooth"})}>About Us</div>
             </div>
@@ -69,11 +69,11 @@ let aboutUsRef=useRef(null)
     <div ref={marketRef}>
       {/*setting up homePage and Coins routes*/}
       <Routes>
-      <Route path='/' element={<Homepage/>}/>
-      <Route path='/coin/:coinId' element={<Coin/>}/>
+      <Route path='/Crypto-Website-Demo/' element={<Homepage/>}/>
+      <Route path='/Crypto-Website-Demo/coin/:coinId' element={<Coin/>}/>
       </Routes>
     </div> 
-    {/*setting up AboutusSection witnin Nav file for navigation*/}
+    {/*setting up About us within Nav file for navigation*/}
     <div ref={aboutUsRef}>
       <AboutUs/>
     </div>
