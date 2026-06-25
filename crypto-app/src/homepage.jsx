@@ -46,9 +46,9 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
     return (
         <div id="page-container">
             <div id="search-container">
-                <h3 id="search-heading">Look for the Best Performing Coins</h3>
+                <h3 id="search-heading" className="block-el">Look for the Best Performing Coins</h3>
                 {/*SearchBox */}
-                <form id="search-box" onSubmit={searchHandle}>
+                <form id="search-box" onSubmit={searchHandle} className="block-el">
                     <input onChange={handleInput} value={input} list="coin-list" type="text" placeholder="Search Crypto........" id="search-input-box" required/>
                     <datalist id="coin-list">
                         {allCoin.map((item,index)=>(<option key={index} value={item.name}/>))}
@@ -58,7 +58,7 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
             </div>
             <div id="coin-table">
                 <table>
-                    <thead>
+                    <thead className="block-el">
                       <tr className="table-layout">
                         <th>Coin</th>
                         <th id="price-th">Price</th>
@@ -66,7 +66,7 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
                         <th>Market Cap</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="block-el">
                     {/*mapping the coin Details*/}
                     {currentPosts.slice(0,10).map((item,index)=>(
                             <tr className="table-layout" key={index}>

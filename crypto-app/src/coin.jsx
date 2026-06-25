@@ -60,7 +60,7 @@ async function fetchHistoricalData(){
     return (
 
         <div>
-          <div id="coinpage-head">
+          <div id="coinpage-head" className="block-el">
             {/*coin heads */}
             <p id="coinpage-heading">
               <img src={coinData.image.large} id="coinpage-icon"/>
@@ -68,30 +68,30 @@ async function fetchHistoricalData(){
             </div>
             <div id="coininfo-container">
               {/*placing the line chart */}
-            <LineChart historicalData={historicalData} />
+            <LineChart historicalData={historicalData} className="block-el"/>
             {/*other coin details*/}
             <div id="coin-info">
-            <div><span>Market Rank:</span> #{coinData.market_cap_rank}</div>
+            <div className="block-el"><span>Market Rank:</span> #{coinData.market_cap_rank}</div>
             <hr/>
-            <div><span>Current Prices:</span> {currency.symbol} {coinData.market_data.current_price[currency.name]}</div>
+            <div className="block-el"><span>Current Prices:</span> {currency.symbol} {coinData.market_data.current_price[currency.name]}</div>
             <hr/>
-            <div><span>24H High:</span> {currency.symbol} {coinData.market_data.high_24h[currency.name]}</div>
+            <div className="block-el"><span>24H High:</span> {currency.symbol} {coinData.market_data.high_24h[currency.name]}</div>
             <hr/>
-            <div><span>24H Low:</span> {currency.symbol} {coinData.market_data.low_24h[currency.name]}</div>
+            <div className="block-el"><span>24H Low:</span> {currency.symbol} {coinData.market_data.low_24h[currency.name]}</div>
             <hr/>
-            <div><span>Launch Date:</span> {coinData.genesis_date?coinData.genesis_date:"NONE"}</div>
+            <div className="block-el"><span>Launch Date:</span> {coinData.genesis_date?coinData.genesis_date:"NONE"}</div>
             <hr/>
-            <div><span>Circulating supply:</span> {coinData.market_data.circulating_supply>1000000000?`${(coinData.market_data.circulating_supply/1000000000).toFixed(2)}B`:coinData.market_data.circulating_supply>1000000?`${(coinData.market_data.circulating_supply/1000000).toFixed(2)}M`:coinData.market_data.circulating_supply>1000?`${(coinData.market_data.circulating_supply/1000).toFixed(2)}K`:coinData.market_data.circulating_supply}</div>
+            <div className="block-el"><span>Circulating supply:</span> {coinData.market_data.circulating_supply>1000000000?`${(coinData.market_data.circulating_supply/1000000000).toFixed(2)}B`:coinData.market_data.circulating_supply>1000000?`${(coinData.market_data.circulating_supply/1000000).toFixed(2)}M`:coinData.market_data.circulating_supply>1000?`${(coinData.market_data.circulating_supply/1000).toFixed(2)}K`:coinData.market_data.circulating_supply}</div>
             <hr/>
-            <div><span>Websites:</span> {coinData.links.homepage}</div>
+            <div className="block-el"><span>Websites:</span> {coinData.links.homepage}</div>
             <hr/>
-            <div><span>Total Volume:</span> {currency.symbol} {coinData.market_data.total_volume[currency.name]>1000000000000?`${(coinData.market_data.total_volume[currency.name]/1000000000000).toFixed(2)}T`:coinData.market_data.total_volume[currency.name]>1000000000?`${(coinData.market_data.total_volume[currency.name]/1000000000).toFixed(2)}B`:coinData.market_data.total_volume[currency.name]>1000000?`${(coinData.market_data.total_volume[currency.name]/1000000).toFixed(2)}M`:coinData.market_data.total_volume[currency.name]>1000?`${(coinData.market_data.total_volume[currency.name]/1000).toFixed(2)}K`:coinData.market_data.total_volume[currency.name]}</div>
+            <div className="block-el"><span>Total Volume:</span> {currency.symbol} {coinData.market_data.total_volume[currency.name]>1000000000000?`${(coinData.market_data.total_volume[currency.name]/1000000000000).toFixed(2)}T`:coinData.market_data.total_volume[currency.name]>1000000000?`${(coinData.market_data.total_volume[currency.name]/1000000000).toFixed(2)}B`:coinData.market_data.total_volume[currency.name]>1000000?`${(coinData.market_data.total_volume[currency.name]/1000000).toFixed(2)}M`:coinData.market_data.total_volume[currency.name]>1000?`${(coinData.market_data.total_volume[currency.name]/1000).toFixed(2)}K`:coinData.market_data.total_volume[currency.name]}</div>
             <hr/>
-            <div><span>Market Cap:</span> {currency.symbol} {coinData.market_data.market_cap[currency.name]>1000000000000?`${(coinData.market_data.market_cap[currency.name]/1000000000000).toFixed(2)}T`:coinData.market_data.market_cap[currency.name]>1000000000?`${(coinData.market_data.market_cap[currency.name]/1000000000).toFixed(2)}B`:coinData.market_data.market_cap[currency.name]>1000000?`${(coinData.market_data.market_cap[currency.name]/1000000).toFixed(2)}M`:coinData.market_data.market_cap[currency.name]}</div>
+            <div className="block-el"><span>Market Cap:</span> {currency.symbol} {coinData.market_data.market_cap[currency.name]>1000000000000?`${(coinData.market_data.market_cap[currency.name]/1000000000000).toFixed(2)}T`:coinData.market_data.market_cap[currency.name]>1000000000?`${(coinData.market_data.market_cap[currency.name]/1000000000).toFixed(2)}B`:coinData.market_data.market_cap[currency.name]>1000000?`${(coinData.market_data.market_cap[currency.name]/1000000).toFixed(2)}M`:coinData.market_data.market_cap[currency.name]}</div>
             <hr/>
             <div id="buy-buttons">
-              <div id="buy-btn">BUY</div>
-              <div id="sell-btn">SELL</div>
+              <div id="buy-btn" className="block-el">BUY</div>
+              <div id="sell-btn" className="block-el">SELL</div>
             </div>
             </div>
             </div>
