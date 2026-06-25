@@ -3,16 +3,16 @@ Coinify is a modern cryptocurrency tracking web application built with React and
 **⭐Project Link:-** https://dragorod.github.io/Crypto-Website-Demo/
 
 ##🛠️ Tools & Technologies Used
--React
--Vite
--JavaScript 
--HTML5
--CSS3
--Git
--GitHub
--GitHub Pages
--React Context API
--Coin Market Data API
+- React
+- Vite
+- JavaScript 
+- HTML5
+- CSS3
+- Git
+- GitHub
+- GitHub Pages
+- React Context API
+- Coin Market Data API
 
 ##✨ Features
 -Live cryptocurrency price tracking
