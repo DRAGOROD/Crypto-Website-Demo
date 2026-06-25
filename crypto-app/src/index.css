@@ -27,9 +27,9 @@ text-align: center;
 
 /*logo*/
 #site-logo{
-  margin-top: -3rem;
+  margin-top: -3.2rem;
   margin-left: 2rem;
-  width:300%;
+  width:250%;
 }
 
 /*nav options*/
@@ -677,3 +677,189 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
 }
                       /*Ending Scroll Animation*/
+
+
+@media (max-width: 799px) and (min-width:320px){
+                              /*Nav*/
+*{
+  box-sizing: border-box;
+
+}
+
+  #nav-links{
+    display: none;
+  }
+  #nav-container img{
+    width:6000%;
+    margin-left: 0.1rem;
+    margin-top: 4rem;
+  }
+
+  #currency-box{
+    width:3.2rem;
+  }
+
+  #login-btn{
+    margin-left: 2.5rem;
+    padding: 0.6rem 1rem;
+  }
+
+  #nav-separator{
+    position: absolute;
+    top:28%;
+  } 
+                              /*Hero*/
+   #hero-heading{
+    margin-top: -2rem;
+    font-size: 1.7rem;
+   }     
+   
+   #righthero-pic{
+    height:2rem;
+    margin-top: -6.5rem;
+    margin-left: 0.5rem;
+   }
+
+   #lefthero-pic{
+    height:2rem;
+    margin-top: -6.5rem;
+    margin-right: 0.7rem;
+   }
+
+   .hero-coin img{
+    width:45%;
+   }
+
+   .hero-coin p{
+    font-size: medium;
+   }
+
+   .hero-coin div{
+    font-size: medium;
+   }
+
+                          /*Search*/
+ #search-heading{
+  margin-top: 8rem;
+ }      
+ 
+ #search-box{
+  width:100%;
+  
+ }
+#search-input-box{
+  width:80%;
+}
+
+ #search-btn{
+  margin-right: -22rem;
+ }
+
+                            /*Market*/
+
+
+
+#coin-table{
+}   
+
+#coin-table table thead tr{
+  margin-left: 0.2rem;
+  width: 98%;
+}
+
+#coin-table table thead tr th{
+  font-size: medium;
+}
+
+
+#coin-table tbody tr td{
+ font-size: x-small;
+ width: 98%;
+ margin-left: 0.2rem;
+}
+
+.coin-names img{
+margin-right: -0.5rem;
+width: 20%;
+}
+
+.table-marketcap{
+  font-size: xx-small;
+}
+
+#pagination-btns button{
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  width: 1.2rem;
+}
+
+
+                              /*About us*/
+
+
+  #aboutus-heading{
+    font-size: xx-large;
+  }    
+  
+  #aup-pic{
+    width: 46%;
+  }
+
+  .aboutus-icons{
+    width: 40%;
+  }
+
+  .stuff-heading{
+    font-size: smaller;
+  }
+
+  .stuff-para{
+    font-size: xx-small;
+  }
+
+
+                                       /*Footer*/
+
+ .container{
+  width: 100%;
+ }   
+
+ .container div h3{
+  font-size: medium;
+ }
+
+ .container div p{
+  font-size: xx-small;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      /*RESPONSIVE FOR PHONE SCREEN*/
+
+

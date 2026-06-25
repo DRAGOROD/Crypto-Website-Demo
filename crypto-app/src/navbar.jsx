@@ -60,7 +60,7 @@ let aboutUsRef=useRef(null)
             </select>
             <div id="login-btn">Login</div>
         </div>
-        <hr/>
+        <hr id="nav-separator"/>
     {/*setting up heroSection within Nav file for navigation*/}
     <div ref={homeRef}>
       <HeroSec/>
