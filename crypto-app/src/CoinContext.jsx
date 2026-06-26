@@ -23,7 +23,7 @@ async function fetchAllCoins(){
 
 
 useEffect(()=>{
-    fetchAllCoins();
+    fetchAllCoins()
 },[currency])
 
 {/*giving the prop value of allCoin,currency and setCurrency to other components*/}
@@ -34,7 +34,6 @@ return (
         {props.children}
     </coinContext.Provider>
 )
-
 }
 
 export default coinContextProvider;

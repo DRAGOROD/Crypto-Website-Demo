@@ -2,6 +2,7 @@ import React from 'react'
 import {useContext,useState,useEffect} from 'react'
 import { coinContext } from './CoinContext'; {/* importing coinContext variable from CoinContext file */}
 import {Link} from 'react-router-dom'; {/*Importing Link to setup the rought page */}
+import MarketSkeleton from './marketSkeleton'
 
 let postPerPage=10;
 
@@ -40,8 +41,10 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
     }
 
     useEffect(()=>{
-        setDisplayCoin(allCoin);
-    },[allCoin])
+ setDisplayCoin(allCoin)
+},[allCoin])
+
+if(displayCoin.length!==0){
 
     return (
         <div id="page-container">
@@ -91,7 +94,9 @@ let totalPages= Math.ceil(displayCoin.length/postPerPage)
             </div>
         </div>
     )
-
+}else{
+    return <MarketSkeleton/>
+}
 }
 
 export default homepage; 

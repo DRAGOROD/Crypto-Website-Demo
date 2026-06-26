@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { coinContext } from "./CoinContext";
 {/*Importing Chart details */}
 import LineChart from "./lineChart";
-{/*Importing Skeleton */}
+{/*Importing Skeleton for coin page*/}
 import SkeletonCoinPage from "./skeletonCoinPage"
 
 function coin(){

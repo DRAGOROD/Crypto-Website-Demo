@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { coinContext } from "./CoinContext";
 import HeroPic1 from './Assets/heropic1.png'
 import HeroPic2 from './Assets/heropic2.png'
+import HeroSkeleton from './heroSkeleton'
+
 function Hero(){
 
 {/*setting up veriables to store the coin details */}  
@@ -10,10 +12,10 @@ let {allCoin,currency}=useContext(coinContext);
 let [showCoin,setShowCoin]=useState([])
 
 useEffect(()=>{
-    setShowCoin(allCoin);
+setShowCoin(allCoin)
 },[allCoin])
 
-
+if(showCoin.length!==0){
 return (
     <>
     <div id="hero-top">
@@ -32,7 +34,9 @@ return (
     </div>
     </>
 )
-
+}else{
+    return <HeroSkeleton/>
+}
 }
 
 export default Hero;
